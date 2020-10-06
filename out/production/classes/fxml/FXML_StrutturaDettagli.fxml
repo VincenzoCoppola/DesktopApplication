@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" pickOnBounds="false" prefHeight="1080.0" prefWidth="1938.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gruppo18.Controller.Strutture_Dettagli_Controller">
+   <children>
+      <Label layoutX="5.0" layoutY="-2.0" prefHeight="0.0" prefWidth="204.0" text="Struttura: ">
+         <font>
+            <Font size="38.0" />
+         </font>
+      </Label>
+      <Label fx:id="NomeStruttDett" layoutX="245.0" layoutY="-2.0" prefHeight="68.0" prefWidth="10.0">
+         <font>
+            <Font size="46.0" />
+         </font>
+      </Label>
+      <Label layoutX="746.0" layoutY="-1.0" text="Id: ">
+         <font>
+            <Font size="38.0" />
+         </font>
+      </Label>
+      <Label layoutX="1396.0" layoutY="9.0" text="Città:">
+         <font>
+            <Font size="38.0" />
+         </font>
+      </Label>
+      <Label layoutX="6.0" layoutY="75.0" prefHeight="110.0" prefWidth="220.0" text="Latitudine e Longitudine:" wrapText="true">
+         <font>
+            <Font size="38.0" />
+         </font>
+      </Label>
+      <Label layoutX="738.0" layoutY="102.0" text="Telefono:">
+         <font>
+            <Font size="38.0" />
+         </font>
+      </Label>
+      <Label layoutX="1400.0" layoutY="106.0" text="Tipo:">
+         <font>
+            <Font size="38.0" />
+         </font>
+      </Label>
+      <Label layoutX="8.0" layoutY="242.0" text="Descrizione:">
+         <font>
+            <Font size="38.0" />
+         </font>
+      </Label>
+      <Label layoutX="741.0" layoutY="238.0" text="Valutazione:">
+         <font>
+            <Font size="38.0" />
+         </font>
+      </Label>
+      <Label layoutX="1397.0" layoutY="243.0" text="Indirizzo:">
+         <font>
+            <Font size="38.0" />
+         </font>
+      </Label>
+      <Label fx:id="Nome" layoutX="258.0" layoutY="19.0" text="Label">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="LateLong" layoutX="259.0" layoutY="122.0" text="Label">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="Descrizione" layoutX="256.0" layoutY="195.0" prefHeight="150.0" prefWidth="450.0" text="Label" wrapText="true" />
+      <Label fx:id="Id" layoutX="973.0" layoutY="19.0" text="Label">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="Telefono" layoutX="973.0" layoutY="122.0" text="Label">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="Valutazione" layoutX="973.0" layoutY="257.0" text="Label">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="Citta" layoutX="1582.0" layoutY="29.0" text="Label">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="Tipo" layoutX="1581.0" layoutY="125.0" text="Label">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="Indirizzo" layoutX="1577.0" layoutY="234.0" prefHeight="80.0" prefWidth="330.0" text="Label" wrapText="true" />
+      <Button layoutX="1198.0" layoutY="358.0" mnemonicParsing="false" onAction="#btnTornaPressed" prefHeight="56.0" prefWidth="240.0" text="Torna a Strutture">
+         <font>
+            <Font size="26.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="btnModifica" layoutX="815.0" layoutY="359.0" mnemonicParsing="false" onAction="#btnModificaPressed" text="Modifica struttura">
+         <font>
+            <Font size="26.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <PieChart fx:id="PieTorta" layoutX="145.0" layoutY="426.0" prefHeight="610.0" prefWidth="830.0" />
+      <Label fx:id="txtRecSi" layoutX="457.0" layoutY="405.0" text="Grafico Recensioni">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <Label fx:id="txtRecNo" layoutX="323.0" layoutY="684.0" text="Questa struttura non ha recensioni">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <ImageView accessibleRole="BUTTON" fitHeight="75.0" fitWidth="93.0" layoutX="1580.0" layoutY="347.0" onMouseClicked="#btnReloadPressed" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../reload.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <SplitPane dividerPositions="0.15985130111524162, 0.31970260223048325, 0.4795539033457249, 0.6394052044609665, 0.8197026022304833" layoutX="906.0" layoutY="448.0" orientation="VERTICAL" prefHeight="540.0" prefWidth="893.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <Label layoutX="106.0" layoutY="10.0" text="Numeri visitatori:">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="nVisit" layoutX="599.0" layoutY="7.0" text="0">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="89.0" prefWidth="414.0">
+               <children>
+                  <Label layoutX="102.0" layoutY="16.0" text="Numero recensioni 5 stelle:">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="n5" layoutX="598.0" layoutY="17.0" text="0">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="74.0" prefWidth="414.0">
+               <children>
+                  <Label layoutX="99.0" layoutY="16.0" text="Numero recensioni 4 stelle:">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="n4" layoutX="601.0" layoutY="20.0" text="0">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="0.0" prefWidth="414.0" SplitPane.resizableWithParent="false">
+               <children>
+                  <Label layoutX="103.0" layoutY="18.0" text="Numero recensioni 3 stelle:">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="n3" layoutX="604.0" layoutY="22.0" text="0">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="107.0" layoutY="17.0" text="Numero recensioni 2 stelle:">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="n2" layoutX="607.0" layoutY="18.0" text="0">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="105.0" layoutY="25.0" text="Numero recensioni 1 stella:">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="n1" layoutX="607.0" layoutY="24.0" text="0">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
